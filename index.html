@@ -57,10 +57,12 @@
 				<tbody>
 
 					<!-- Create a table row for each person in your data object -->
-					
-						
-						<!-- Create 3 <td> elements to display name, job_title, and salary -->
-						
+					<tr ng-repeat="p in data | orderBy:sortType | filter:search">
+						<td>{{p.name}}</td>
+						<td>{{p.job_title}}</td>
+						<td>{{p.salary | currency:"$":0}}</td>
+					</tr>
+						<!-- Create 3 <td> elements to display name, job_title, and salary -->	
 
 
 				</tbody>
